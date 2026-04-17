@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - GitsiteX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/article.css">
+</head>
+<body>
+    <div class="floating-bar">
+        <div class="floating-bar-inner">
+            <a href="../index.html" class="logo">GitsiteX</a>
+            <nav class="floating-nav">
+                <a href="explore.html">Explore</a>
+                <a href="articles.html">Articles</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="article-container">
+        <article class="article">
+            <header class="article-header">
+                <a href="articles.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Articles
+                </a>
+                <div class="article-meta">
+                    <span class="article-tag" id="article-tag">Tutorial</span>
+                    <span class="article-date" id="article-date">Apr 15, 2026</span>
+                </div>
+                <h1 id="article-title">Building Modern Web Applications</h1>
+                <div class="article-info">
+                    <span class="read-time" id="article-readtime">8 min read</span>
+                </div>
+            </header>
+            <div class="article-content" id="article-content">
+                <p>Article content will be loaded here...</p>
+            </div>
+        </article>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/article.js"></script>
+</body>
+</html>

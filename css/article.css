@@ -1,0 +1,250 @@
+.article-container {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.article {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.article-header {
+    margin-bottom: 48px;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.article-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: white;
+}
+
+.article-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.article-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.article-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.read-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.article-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.article-content p {
+    margin-bottom: 24px;
+}
+
+.article-content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.article-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+.article-content li {
+    margin-bottom: 12px;
+}
+
+.article-content code {
+    background: var(--bg-secondary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
+}
+
+.article-content pre {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+    margin: 24px 0;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.article-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.article-content a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .article-container {
+        padding: 100px 20px 40px;
+    }
+
+    .article-header {
+        margin-bottom: 32px;
+    }
+
+    .article-meta {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .article-header h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        margin-bottom: 16px;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .article-content h2 {
+        font-size: 1.3rem;
+        margin-top: 36px;
+    }
+
+    .article-content h3 {
+        font-size: 1.1rem;
+        margin-top: 24px;
+    }
+
+    .article-content pre {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-container {
+        padding: 90px 16px 32px;
+    }
+
+    .back-link {
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+    }
+
+    .article-tag {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .article-date {
+        font-size: 0.8rem;
+    }
+
+    .article-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .article-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .article-content p {
+        margin-bottom: 16px;
+    }
+
+    .article-content h2 {
+        font-size: 1.2rem;
+        margin-top: 28px;
+    }
+
+    .article-content pre {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+
+    .article-content blockquote {
+        padding-left: 16px;
+        margin: 20px 0;
+    }
+}

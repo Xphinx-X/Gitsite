@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitsiteX - Discover and Explore Anything</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="floating-bar">
+        <div class="floating-bar-inner">
+            <a href="#" class="logo" id="logo-btn">GitsiteX</a>
+            <nav class="floating-nav">
+                <a href="pages/explore.html">Explore</a>
+                <a href="pages/articles.html">Articles</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="gradient-text glitch" data-text="GitsiteX">GitsiteX</span></h1>
+            <p class="hero-tagline">Discover and Explore Anything On the Internet</p>
+            <a href="pages/explore.html" class="explore-btn">
+                <span>Explore</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-decoration">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+    </main>
+
+    <button class="fab" id="fab">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"></path>
+        </svg>
+    </button>
+
+    <div class="customizer-menu" id="customizer">
+        <div class="color-options">
+            <button class="color-btn active" data-color="#7c3aed" style="background: #7c3aed" title="Purple"></button>
+            <button class="color-btn" data-color="#2563eb" style="background: #2563eb" title="Blue"></button>
+            <button class="color-btn" data-color="#059669" style="background: #059669" title="Green"></button>
+            <button class="color-btn" data-color="#dc2626" style="background: #dc2626" title="Red"></button>
+            <button class="color-btn" data-color="#ea580c" style="background: #ea580c" title="Orange"></button>
+            <button class="color-btn" data-color="#0891b2" style="background: #0891b2" title="Cyan"></button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

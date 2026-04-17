@@ -1,0 +1,188 @@
+.page-content {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-title {
+    font-family: 'Satoshi', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.explore-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.explore-card:not(.coming-soon):hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.explore-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.explore-card:not(.coming-soon):hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--bg-elevated);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.explore-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.explore-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.explore-card:not(.coming-soon):hover .card-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 100px 16px 40px;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
+    .page-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .explore-card {
+        padding: 24px;
+    }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+    }
+
+    .card-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .explore-card h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-content {
+        padding: 90px 12px 32px;
+    }
+
+    .explore-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .explore-card h2 {
+        font-size: 1rem;
+    }
+
+    .explore-card p {
+        font-size: 0.9rem;
+    }
+}
